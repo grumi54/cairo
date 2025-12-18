@@ -41,7 +41,7 @@ pub fn build_downcast(
         deref value;
     );
 
-    // The casm code below assumes both types are at most 128 bits.
+    // The CASM code below assumes both types are at most 128 bits.
     assert!(
         libfunc.from_range.is_small_range() && libfunc.to_range.is_small_range(),
         "Downcasting is not supported for types of size > 128 bits."
